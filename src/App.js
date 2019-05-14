@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import Toggle from './ToggleRenderChildrenProps';
+import Portal from "./Portal";
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
             }
           }
         </Toggle>
+        <Portal>
+          <h1>I am Portal</h1>
+        </Portal>
       </header>
     </div>
   );
