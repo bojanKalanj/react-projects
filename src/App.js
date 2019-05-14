@@ -4,6 +4,7 @@ import './App.css';
 
 import Toggle from './ToggleRenderChildrenProps';
 import Portal from "./Portal";
+import Modal from './Modal';
 
 function App() {
   return (
@@ -19,16 +20,16 @@ function App() {
           );
         }}/> */}
         <Toggle>
-          {
-            (on, toggle) => {
-              return (
-                <Fragment>
-                  {on && <h1>Toggle me</h1>}
-                  <button onClick={toggle}>Show / Hide</button>
-                </Fragment>
-              );
-            }
-          }
+          {(on, toggle) => {
+            return (
+              <Fragment>
+                <button onClick={toggle}>Login</button>
+                <Modal on={on} toggle={toggle}>
+                  IN MODAL
+                </Modal>
+              </Fragment>
+            );
+          }}
         </Toggle>
         <Portal>
           <h1>I am Portal</h1>
