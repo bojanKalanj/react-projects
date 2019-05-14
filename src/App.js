@@ -25,7 +25,7 @@ function App() {
               <Fragment>
                 <button onClick={toggle}>Login</button>
                 <Modal on={on} toggle={toggle}>
-                  IN MODAL
+                  <h1>IN MODAL</h1>
                 </Modal>
               </Fragment>
             );
