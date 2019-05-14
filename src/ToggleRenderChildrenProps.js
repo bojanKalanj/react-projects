@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from "react";
 
 export default class ToggleRenderChildrenProps extends Component {
     state = {
@@ -14,9 +14,9 @@ export default class ToggleRenderChildrenProps extends Component {
         let { on } = this.state;
         const { children } = this.props;
         return (
-          <div>
+          <Fragment>
             { children(on, this.toggle) }
-          </div>
+          </Fragment>
         );
     }
 }

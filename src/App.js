@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
@@ -21,10 +21,10 @@ function App() {
           {
             (on, toggle) => {
               return (
-                <div>
+                <Fragment>
                   {on && <h1>Toggle me</h1>}
                   <button onClick={toggle}>Show / Hide</button>
-                </div>
+                </Fragment>
               );
             }
           }
